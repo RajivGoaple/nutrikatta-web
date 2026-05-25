@@ -1,0 +1,71 @@
+.vision {
+  background: var(--white); position: relative; overflow: hidden;
+  .vision-bg {
+    position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+    background: linear-gradient(135deg, rgba(240,247,237,0.5) 0%, rgba(212,232,194,0.3) 100%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); pointer-events: none;
+  }
+  .vision-header { text-align: center; margin-bottom: 60px; max-width: 640px; margin-inline: auto; margin-bottom: 60px; }
+  .vision-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; margin-bottom: 64px; align-items: start; }
+
+  .vision-main-card {
+    background: linear-gradient(145deg,#1e6b1e,#144d14); border-radius: 24px; padding: 44px;
+    .vision-icon-wrap {
+      width: 64px; height: 64px; border-radius: 20px; background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+      i { font-size: 1.6rem; color: #fff; }
+    }
+    h3 { font-size: 1.5rem; color: #fff; margin-bottom: 16px; }
+    p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 28px; }
+    .vision-quote {
+      display: flex; align-items: center; gap: 12px; padding: 16px 20px;
+      background: rgba(255,255,255,0.12); border-radius: 12px; border-left: 3px solid rgba(255,255,255,0.5);
+      i { color: rgba(255,255,255,0.6); font-size: 1.1rem; }
+      em { font-style: italic; color: #fff; font-size: 1rem; font-weight: 500; }
+    }
+  }
+
+  .vision-pillars {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    .pillar-card {
+      background: var(--light-green-bg); border-radius: 18px; padding: 24px;
+      border: 1px solid var(--border); transition: all 0.3s ease;
+      &:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .pillar-icon {
+        width: 48px; height: 48px; border-radius: 14px;
+        background: linear-gradient(135deg,#1e6b1e,#3d9c3d);
+        display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+        i { color: #fff; font-size: 1.1rem; }
+      }
+      h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; font-family: "DM Sans",sans-serif; }
+      p { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; }
+    }
+  }
+
+  .vision-commitment {
+    background: var(--cream); border-radius: 24px; padding: 48px; border: 1px solid var(--border);
+    h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 32px; text-align: center; }
+    .commit-list {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
+      .commit-item {
+        display: flex; align-items: flex-start; gap: 12px; padding: 16px;
+        background: var(--white); border-radius: 12px; border: 1px solid var(--border);
+        i { color: #1e6b1e; font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+        span { font-size: 0.85rem; color: var(--text-body); line-height: 1.5; }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .vision .vision-commitment .commit-list { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  .vision .vision-grid { grid-template-columns: 1fr; }
+  .vision .vision-pillars { grid-template-columns: 1fr 1fr; }
+  .vision .vision-commitment .commit-list { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .vision .vision-pillars { grid-template-columns: 1fr; }
+  .vision .vision-commitment .commit-list { grid-template-columns: 1fr; }
+  .vision .vision-main-card { padding: 28px; }
+}

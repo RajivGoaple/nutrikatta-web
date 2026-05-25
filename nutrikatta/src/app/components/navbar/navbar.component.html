@@ -1,0 +1,28 @@
+<nav class="navbar" [class.scrolled]="scrolled" [class.menu-open]="menuOpen">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" (click)="scrollTo($event, 'home')">
+      <img src="assets/logo.png" alt="Nutrikatta Logo" class="logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" (click)="scrollTo($event, 'home')" [class.active]="activeSection==='home'">Home</a></li>
+      <li><a href="#about" (click)="scrollTo($event, 'about')" [class.active]="activeSection==='about'">About Us</a></li>
+      <li><a href="#menu" (click)="scrollTo($event, 'menu')" [class.active]="activeSection==='menu'">Menu</a></li>
+      <li><a href="#vision" (click)="scrollTo($event, 'vision')" [class.active]="activeSection==='vision'">Our Vision</a></li>
+      <li><a href="#location" (click)="scrollTo($event, 'location')" [class.active]="activeSection==='location'">Location</a></li>
+    </ul>
+    <a href="tel:9665772666" class="nav-cta"><i class="fas fa-phone-alt"></i> Order Now</a>
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <ul>
+      <li><a href="#home" (click)="scrollTo($event, 'home'); closeMenu()">Home</a></li>
+      <li><a href="#about" (click)="scrollTo($event, 'about'); closeMenu()">About Us</a></li>
+      <li><a href="#menu" (click)="scrollTo($event, 'menu'); closeMenu()">Menu</a></li>
+      <li><a href="#vision" (click)="scrollTo($event, 'vision'); closeMenu()">Our Vision</a></li>
+      <li><a href="#location" (click)="scrollTo($event, 'location'); closeMenu()">Location</a></li>
+    </ul>
+    <a href="tel:9665772666" class="mobile-cta"><i class="fas fa-phone-alt"></i> 9665772666</a>
+  </div>
+</nav>

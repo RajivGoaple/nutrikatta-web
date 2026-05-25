@@ -1,0 +1,45 @@
+<section id="menu" class="menu section-padding">
+  <div class="container">
+    <div class="menu-header">
+      <div class="section-tag"><i class="fas fa-utensils"></i> What We Serve</div>
+      <h2 class="section-title">Our <span>Fresh Menu</span></h2>
+      <p class="section-subtitle">Every dish is freshly prepared with natural, wholesome ingredients. No preservatives. No shortcuts.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card" *ngFor="let item of menuItems">
+        <div class="menu-card-icon">
+          <i [class]="item.icon"></i>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>{{item.name}}</h3>
+            <span class="menu-tag" *ngIf="item.tag">{{item.tag}}</span>
+          </div>
+          <p class="menu-desc">{{item.description}}</p>
+          <div class="menu-card-footer">
+            <div class="menu-badges">
+              <span *ngFor="let b of item.badges"><i [class]="b.icon"></i>{{b.label}}</span>
+            </div>
+            <div class="menu-price">
+              <span class="currency">₹</span>{{item.price}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-cta-banner">
+      <div class="banner-text">
+        <h3>Ready to eat healthy today?</h3>
+        <p>Call us or follow us on Instagram for daily specials</p>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:9665772666" class="btn-primary"><i class="fas fa-phone-alt"></i> 9665772666</a>
+        <a href="https://www.instagram.com/nutrikatta_official" target="_blank" class="btn-outline btn-insta">
+          <i class="fab fa-instagram"></i> @nutrikatta_official
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

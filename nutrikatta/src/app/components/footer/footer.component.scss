@@ -1,0 +1,60 @@
+.footer {
+  .footer-main {
+    background: #0f3d0f; padding: 72px 0;
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; }
+    .footer-brand {
+      .footer-logo {
+        display: flex; align-items: center; margin-bottom: 18px;
+        .footer-logo-img {
+          height: 120px; width: auto; object-fit: contain;
+          filter: brightness(0) invert(1);
+          opacity: 0.9;
+        }
+      }
+      p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 24px; }
+      .footer-social {
+        display: flex; gap: 12px;
+        a {
+          width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.12);
+          display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;
+          i { color: rgba(255,255,255,0.7); font-size: 1rem; }
+          &:hover { background: #1e6b1e; border-color: #3d9c3d; i { color: #fff; } }
+        }
+      }
+    }
+    .footer-col {
+      h4 { font-size: 0.85rem; font-weight: 600; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: "DM Sans",sans-serif; }
+      ul { list-style: none;
+        li { margin-bottom: 10px;
+          a { font-size: 0.83rem; color: rgba(255,255,255,0.55); transition: all 0.25s ease; text-decoration: none;
+            &:hover { color: #8bc34a; padding-left: 4px; } }
+        }
+      }
+      .footer-contact {
+        .fc-item {
+          display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;
+          i { color: #8bc34a; font-size: 0.85rem; margin-top: 3px; flex-shrink: 0; width: 16px; }
+          a, span { font-size: 0.83rem; color: rgba(255,255,255,0.6); text-decoration: none; line-height: 1.5;
+            &:hover { color: #8bc34a; }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background: #0a2d0a; padding: 20px 0;
+    .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    p { font-size: 0.78rem; color: rgba(255,255,255,0.4);
+      i { color: #ff6b6b; }
+    }
+    .footer-motto { color: #8bc34a; font-weight: 600; font-size: 0.82rem; }
+  }
+}
+@media (max-width: 1024px) {
+  .footer .footer-main .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .footer .footer-main .footer-grid { grid-template-columns: 1fr; }
+  .footer .footer-bottom .container { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,65 @@
+<section id="home" class="hero">
+  <div class="hero-bg-pattern"></div>
+  <!-- floating veggie icons -->
+  <div class="veggie-float v1"><i class="fas fa-leaf"></i></div>
+  <div class="veggie-float v2"><i class="fas fa-carrot"></i></div>
+  <div class="veggie-float v3"><i class="fas fa-apple-alt"></i></div>
+  <div class="veggie-float v4"><i class="fas fa-seedling"></i></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-leaf"></i> Fresh &bull; Healthy &bull; Tasty
+      </div>
+      <h1>
+        Nourish Your Body,<br>
+        <span>Brighten Your Day</span>
+      </h1>
+      <p class="hero-desc">
+        Nutrikatta brings you wholesome, fresh food crafted with love —
+        from energising breakfast bowls to refreshing juices and protein-packed salads.
+        Eat clean, feel great!
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary" (click)="scrollTo($event,'menu')">
+          <i class="fas fa-utensils"></i> View Our Menu
+        </a>
+        <a href="tel:9665772666" class="btn-outline">
+          <i class="fas fa-phone-alt"></i> Order Now
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="num">100%</span><span class="lbl">Fresh Ingredients</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="num">7+</span><span class="lbl">Healthy Dishes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="num">500+</span><span class="lbl">Happy Customers</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <div class="veggie-grid">
+          <div class="veggie-item"><i class="fas fa-leaf"></i><span>Salads</span></div>
+          <div class="veggie-item"><i class="fas fa-blender"></i><span>Juices</span></div>
+          <div class="veggie-item"><i class="fas fa-sun"></i><span>Breakfast</span></div>
+          <div class="veggie-item"><i class="fas fa-seedling"></i><span>Snacks</span></div>
+        </div>
+        <div class="hero-brand-circle">
+          <img src="assets/logo.png" alt="Nutrikatta" class="brand-logo-img" />
+        </div>
+      </div>
+      <div class="hero-card-float top-card">
+        <i class="fas fa-check-circle"></i>
+        <div><b>No Preservatives</b><br><small>100% Natural</small></div>
+      </div>
+      <div class="hero-card-float bottom-card">
+        <i class="fas fa-fire-alt"></i>
+        <div><b>High Protein</b><br><small>Nutritious Meals</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" (click)="scrollTo($event,'about')">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
